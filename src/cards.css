@@ -6,7 +6,10 @@ html {
     background-color: #FFFFFF;
 }
 
-.icon {color: #BCD2DA;}
+.icon {
+  color: #BCD2DA;
+  
+}
 
 .card {
     /* display, flex-direction */
@@ -20,13 +23,15 @@ html {
     padding: 15px 0;
 }
 
-.card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
+.card__descriptionIcon {
+  font-size: 32px; 
+  margin-bottom: 10px;
+}
 
 .card__descriptionText {
     color: #57727C;
     font-size: 12px;
     text-align: center;
-    max-width: calc(100% - 30px);
 }
 
 .card__price {
@@ -45,6 +50,10 @@ html {
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    display: flex;
+    max-width: 710px;
+    margin: auto;
+    justify-content: center;
   }
   
     .cardGroup__card {
@@ -52,6 +61,10 @@ html {
   
       border: none;
       border-radius: 0;
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
     }
   
     .cardGroup__card {
@@ -60,4 +73,16 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @media (max-width: 768px){
+      .cardGroup{
+        width: 320px;
+        flex-direction: column;
+      }
     }
